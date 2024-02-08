@@ -1,12 +1,4 @@
-/*
-* DOMINA - Domain sale and auction landing page
-* Build Date: March 2019
-* Last Update: March 2019
-* Author: ThemeAtelier
-* Author URL: http://www.themeatelier.net
-* Copyright (C) 2019 ThemeAtelier
-* EXCLUSIVE ON themeforest.net
-*/
+
 /* TABLE OF CONTENTS
 	1. IMPORT GOOGLE FONTS
 	2. THEMEING
@@ -79,7 +71,7 @@ h6, .btn-default.btn-default-light, .domain-offering, .btn-default.btn-default-o
   background-color: transparent !important;
 }
 
-.light-bg, .domain-pricing, .contact-form-wrap, .search-form button, .domain-offer, .btn-default.btn-default-light, .domain-offering-fill {
+.light-bg, .domain-pricing, .contact-form-wrap, .search-form button, .btn-default.btn-default-light, .domain-offering-fill {
   background: #ffffff !important;
 }
 
@@ -8653,3 +8645,7 @@ h6 {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+
+
+
