@@ -8045,14 +8045,27 @@ h6 {
   fill: #af0a79;
 }
 
-.text-bg {
-  opacity: 0.1;
-  font-size: 90px;
+.text-bg img{
+  height: 800px;
+  opacity: 0.2;
   position: absolute;
-  right: 0;
-  top: 280px;
-  transform: rotate(15deg);
+  /* right: 200px; */
+  left: 200px;
+  top: 10px;
+  transform: rotate(30deg);
 }
+@media only screen and (max-width: 950px) and (min-width: 350px){
+  .text-bg img{
+    height: 500px;
+    opacity: 0.2;
+    position: absolute;
+    /* right: 100px; */
+    left: 20px;
+    top: 200px;
+    transform: rotate(30deg);
+  }
+}
+
 
 .shadow-1 {
   box-shadow: -4px 49px 79px 0px rgba(0, 0, 0, 0.15);
