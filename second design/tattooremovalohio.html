@@ -174,7 +174,7 @@
                      <div class="row">
                         <div class="offset-sm-1 col-sm-10">
                            <div class="offer-form-wrap shadow-1 p-50px sm-p-15px m-15px-b">
-                              <form  action="https://api.web3forms.com/submit" method="post"> 
+                              <form  action="https://api.web3forms.com/submit" method="post" onsubmit="return validateOffer()"> 
                                  <input type="hidden" name="access_key" value="da77a666-1b4a-40a3-9639-aee8817f2c4f">
                                  <div class="message">
                                     <!-- <p class="email-loading alert alert-warning"><img src="img/loading.gif"
@@ -194,20 +194,25 @@
                                     </p> -->
                                  </div>
                                  <div class=" mb13">
+                                    <label for="DOMAIN">Domain</label>
                                     <input name="DOMAIN" class="contact-name" id="offer-name" type="text"
-                                       placeholder="TYPE THE DOMAIN YOU WANT TO MAKE OFFER FOR" required="" value="tattooremovalohio.com">
+                                       placeholder="TYPE THE DOMAIN YOU WANT TO MAKE OFFER FOR" required=""
+                                 value="tattooremovalohio.com">
                                  </div>
                                  <div class=" mb13">
+                                    <label for="NAME">Name</label>
                                     <input name="NAME" class="contact-name" id="offer-name" type="text"
-                                       placeholder="Your Name*" required="">
+                                       placeholder="" required="">
                                  </div>
                                  <div class="mb13">
+                                    <label for="EMAIL">Email</label>
                                     <input name="EMAIL" class="contact-email" id="offer-email" type="email"
-                                       placeholder="Your Email*" required="">
+                                       placeholder="" required="">
                                  </div>
                                  <div class="mb13">
+                                    <label for="OFFER">Your Offer "$"</label>
                                     <input name="OFFER" class="contact-subject" id="offer-subject" type="text"
-                                       placeholder="YOUR OFFER*" required="" value="$">
+                                       placeholder="" required="" value="">
                                  </div>
                                  <div class="mb30">
                                     <textarea name="MESSAGE" class="contact-message" id="offer-message"
@@ -243,7 +248,24 @@
    <!-- ========== Main End ========== -->
 
 
+   <script>
+      function validateOffer() {
+         // Get the offer amount from the form
+         var offerAmount = document.getElementById('offer-subject').value;
 
+         // Set your minimum offer amount
+         var minimumAmount = 100; // Set your desired minimum amount
+
+         // Check if the offer is above the minimum amount
+         if (offerAmount < minimumAmount) {
+            alert('Offer below minimum. Kindly make an improved offer');
+            return false; // Prevent form submission
+         }
+
+         // Continue with form submission if the offer is above the minimum amount
+         return true;
+      }
+   </script>
    <!-- jQuery -->
    <script src="js/jquery-3.2.1.min.js"></script>
    <script src="js/jquery-migrate-3.0.0.min.js"></script>
